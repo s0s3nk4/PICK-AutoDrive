@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <title>AutoDrive</title>
+        <meta charset="utf-8">
+        <meta name="keywords" content="AutoDrive, AI Cars, Autonomous Cars">
+        <meta name="description" content="Autonomiczne pojazdy">
+        <meta name="author" content="Mateusz Sosna">
+        <meta http-equiv="refersh" content="300">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="adstyle.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    </head>
+    <script>
+        let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+    </script>
+    <body>
+        <header>
+            <h1><span style="color:#0AFA00;">Auto</span>Drive</h1>
+            <div class="navbar">
+                <div class="dropdown">
+                    <button style="float:right" class="dropbtn">
+                        <img src="img/menu.png" alt="menu">
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#">Oferta</a>
+                        <a href="#">O firmie</a>
+                        <a href="#">Kontakt</a>
+                    </div>
+                </div>
+            </div>
+            <div class="desktop-content">
+                <a href="#">Kontakt</a>
+                <a href="#">O firmie</a>
+                <a href="#">Oferta</a>
+            </div>
+        </header>
+        <div id="article1">
+            <h2>Nasze rozwiązania zapewniają łatwą i bezpieczną podróż</h2>
+            <img src="img/zdj1.png" alt="zdjecie">
+            <button>Oferta</button>
+        </div>
+        <div id="article2">
+            <h2>Te marki z nami współpracują</h2>
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 4</div>
+                <img src="img/audi.png" alt="audi" style="width:100%">
+                <div class="text">Audi</div>
+              </div>
+              <div class="mySlides fade">
+                <div class="numbertext">2 / 4</div>
+                <img src="img/bmw.png" alt="bmw" style="width:100%">
+                <div class="text">BMW</div>
+              </div>
+              <div class="mySlides fade">
+                <div class="numbertext">3 / 4</div>
+                <img src="img/mercedes.png" alt="mercedes" style="width:100%">
+                <div class="text">Mercedes</div>
+              </div>
+              <div class="mySlides fade">
+                <div class="numbertext">4 / 4</div>
+                <img src="img/vw.png" alt="vw" style="width:100%">
+                <div class="text">Volkswagen</div>
+              </div>
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+          </div>
+          </div>
+          <div id="article3">
+            <h2>Skup się na swoich zadaniach, a my dowieziemy Cię do celu</h2>
+            <img src="img/zdj2.jpg" alt="zdjecie">
+            <button>Oferta</button>
+        </div>
+        <div id="article4">
+            <h2>Sprawdź w jaki sposób tworzymy autonomiczne pojazdy</h2>
+            <img src="img/zdj3.jpg" alt="zdjecie">
+            <button>O firmie</button>
+        </div>
+        <div id="article5">
+          <h2>Zainteresowany nowościami?</h2>
+          <h2>Już dziś zasubskrubuj nasz newsletter</h2>
+          <button>Zapisz się</button>
+        </div>
+        <footer>
+          <ul class="kontakt">Kontakt
+            <li>109-283-745</li>
+            <li>autodriveeu@mail.com</li>
+          </ul>
+          <ul class="media">Media
+            <li>Facebook</li>
+            <li>Instagram</li>
+            <li>Twitter</li>
+          </ul>
+        </footer>
+    </body>
+</html>
